@@ -6,5 +6,4 @@ function Main() {
     const [employee, setEmployee] = useState({})
     const [employees, setEmployees] = useState([])
     const [employeeIndex, setEmployeeIndex] = useState(0)
-    
 }
