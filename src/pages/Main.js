@@ -7,11 +7,35 @@ function Main() {
     // const [employee, setEmployee] = useState({})
     const [employees, setEmployees] = useState([])
     // const [employeeIndex, setEmployeeIndex] = useState(0)
+    const [search, setSearch] = useState("")
+
+    const handleInputChange = e => {
+        let value = e.target.value
+        setSearch(value)
+    }
 
     useEffect(() => {
         loadEmployees()
     }, [])
 
+   
+   function employeeSearch() {
+        let newArray = [...employees]
+
+        if (employees.length === 0) {
+            return newArray
+        }
+        if (search === "") {
+            return newArray
+        }
+
+        newArray = newArray.filter(item => {
+            return item.firstName.includes(search)
+        })
+
+        return newArray
+    }
+    
     function loadEmployees() {
         API.fetchEmployees()
             .then(res => {
@@ -29,13 +53,12 @@ function Main() {
                 setEmployees(results)
             })
             .catch(err => console.log(err))
-        // console.log(employees)
     }
 
     return (
         <div>
-            <SearchForm />
-            <Table results={employees} />   
+            <SearchForm handleInputChange={handleInputChange} search={search} />
+            <Table results={employeeSearch()} />
         </div>
     )
 }
