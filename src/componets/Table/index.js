@@ -13,7 +13,7 @@ function Table(props) {
                 <th scope="col">E-Mail Address</th>
                 </tr>
             </thead>
-            <SearchResults results={props.results} />
+            <SearchResults results={props.results} handleBtnClick={props.handleBtnClick} />
         </table>
     )
 }
