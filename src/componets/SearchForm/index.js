@@ -20,6 +20,14 @@ function SearchForm(props) {
           <div className="col-md-2 mx-0 px-0">
           <button type="reset" onClick={props.handleReset} className="btn btn-danger col-2">X</button>
           </div>
+          <div className="justify-content-center d-inline-flex row">
+            <div className="col-md-6 mx-2">
+            <button type="button" class="btn btn-info sort-first">Sort by First Name</button>
+            </div>
+            <div className="col-md-6 mx-2">
+            <button type="button" class="btn btn-info sort-last">Sort by Last Name</button>
+            </div>
+          </div>
         </div>
       </form>
     );
