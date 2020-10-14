@@ -23,7 +23,11 @@
 
   ## How to Use This Application
 
-  When this application loads it will immediately make an API call to populate the table with 50 random employees by listing their first name, last name, and e-mail address. Once the list of employees has been rendered the user can use the search field to search for an employee by first name, last name, or e-mail address; the table of employees will dynamically update to match what the user has typed into the search field as the user types. The Red button next to the search field will clear the search. The user also can sort the list of employees by first name or last name by clicking on the corresponding button located below the search field. 
+  When this application loads it will immediately make an API call to populate the table with 50 random employees by listing their first name, last name, and e-mail address. Once the list of employees has been rendered the user can use the search field to search for an employee by first name, last name, or e-mail address; the table of employees will dynamically update to match what the user has typed into the search field as the user types. 
+  
+  ![Employee Directory in action](/assets/images/employee-directory-app.png)
+
+  The Red button next to the search field will clear the search. The user also can sort the list of employees by first name or last name by clicking on the corresponding button located below the search field. 
 
   ## Test Code
 
