@@ -1,16 +1,20 @@
 import React from "react"
 import SearchResults from "../SearchResults"
+import SortBtn from "../sortBtn"
+
 
 function Table(props) {
      console.log("Table", props.results)
     return(
         <div className="container">
-            <div className="justify-content-center d-inline-flex row">
-                <div className="col-md-6 mx-2">
-                <sortBtn onClick={props.handleBtnClick} data-value="first-name-sort" />
+            <div className="row my-2 ml-5">
+                <div className="col-4 mx-2">
+                <SortBtn handleBtnClick={props.handleBtnClick} data-value="first-name-sort" text="Sort by First Name">
+                </SortBtn>
                 </div>
-                <div className="col-md-6 mx-2">
-                <sortBtn onClick={props.handleBtnClick} data-value="last-name-sort" />
+                <div className="col-4 mx-2">
+                <SortBtn handleBtnClick={props.handleBtnClick} data-value="last-name-sort" text="Sort by Last Name">
+                </SortBtn>
                 </div>
             </div>
             <div className="row">

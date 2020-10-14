@@ -18,22 +18,24 @@ function Main() {
         setSearch("")
     }
 
-    const handleBtnClick = e => {
-        let btnType = e.target.attributes.getNamedItem("data-value".value)
+    function handleBtnClick(e) {
+        let btnType = e.target.getAttribute("data-value")
         let newArray = [...employees]
 
-        if (btnType === "fist-name-sort") {
-            newArray = newArray.sort()
-            console.log("sort first name", newArray)
-            return newArray
+        if (employees.length === 0) {
+            return
         }
-        if (btnType === "last-name-sort") {
-            newArray = newArray.sort()
-            newArray = newArray.reverse()
-            console.log("sort last name", newArray)
-            return newArray
+
+        if (btnType === "first-name-sort") {
+            const firstArray = newArray.sort((a,b) => (a.firstName > b.firstName) ? 1 : (b.firstName > a.firstName) ? -1 : 0)
+            console.log("sort first name", firstArray)
+            setEmployees(firstArray)
         }
-        return newArray
+        else if (btnType === "last-name-sort") {
+            const lastArray = newArray.sort((a,b) => (a.lastName > b.lastName) ? 1 : (b.lastName > a.lastName) ? -1 : 0)
+            console.log("sort last name", lastArray)
+            setEmployees(lastArray)
+        }
     }
 
     useEffect(() => {
@@ -65,6 +67,7 @@ function Main() {
                 const APIResults = res.data.results
                 const results = APIResults.map(employee => {
                     return {
+                        id: employee.id.value,
                         image: employee.picture.thumbnail,
                         firstName: employee.name.first,
                         lastName: employee.name.last,
