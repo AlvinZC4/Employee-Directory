@@ -19,7 +19,7 @@
 
   ## Installation
 
-  Navigate your web browers to https://alvinzc4.github.io/Employee-Directory/
+  Navigate your web browers to https://secret-earth-77330.herokuapp.com//
 
   ## How to Use This Application
 
