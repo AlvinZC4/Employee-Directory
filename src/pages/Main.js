@@ -54,7 +54,7 @@ function Main() {
         }
 
         newArray = newArray.filter(item => {
-            return item.firstName.includes(search)
+            return item.firstName.includes(search) || item.lastName.includes(search)
         })
 
         return newArray
