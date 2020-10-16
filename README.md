@@ -19,11 +19,11 @@
 
   ## Installation
 
-  Navigate your web browers to https://secret-earth-77330.herokuapp.com//
+  Navigate your web browers to https://alvinzc4.github.io/Employee-Directory/ or https://secret-earth-77330.herokuapp.com//
 
   ## How to Use This Application
 
-  When this application loads it will immediately make an API call to populate the table with 50 random employees by listing their first name, last name, and e-mail address. Once the list of employees has been rendered the user can use the search field to search for an employee by first name, last name, or e-mail address; the table of employees will dynamically update to match what the user has typed into the search field as the user types. 
+  When this application loads it will immediately make an API call to populate the table with 50 random employees by listing their first name, last name, and e-mail address. Once the list of employees has been rendered the user can use the search field to search for an employee by first name or last name; the table of employees will dynamically update to match what the user has typed into the search field as the user types into the search field.
   
   ![Employee Directory in action](/assets/images/employee-directory-app.png)
 
